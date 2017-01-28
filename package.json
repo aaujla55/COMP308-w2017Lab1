@@ -1,0 +1,25 @@
+{
+  "name": "comp308-w2017lab1",
+  "version": "1.0.0",
+  "description": "express website with nodejs - route example",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaujla55/COMP308-w2017Lab1.git"
+  },
+  "keywords": [
+    "NodeJs",
+    "ExpressJs",
+    "Route"
+  ],
+  "author": "Amandeep Aujla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aaujla55/COMP308-w2017Lab1/issues"
+  },
+  "homepage": "https://github.com/aaujla55/COMP308-w2017Lab1#readme"
+}
