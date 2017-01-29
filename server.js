@@ -6,24 +6,28 @@ let app = express();
 // create the port constant
 const port = 3000;
 
-// start listening on the port
-app.listen(port);
+let path = require('path');
+
+
+
 console.log(`Server started at http://localhost:${port}`);
 
 // ROUTING - mounted our routes
 
-// second route is '/hello'
-app.use('/hello', (req, res, next) => {
-  res.setHeader('Content-Type', 'text/plain');
-  res.end("Hello, World!");
+// second route is '/about'
+app.get('/about', (req, res, next) => {
+ res.sendfile(path.join(__dirname+'/about.html'));
+});
 
-  next();
+//third route is is '/contact'/
+app.get('/contact', (req, res, next) => {
+ res.sendfile(path.join(__dirname+'/contact.html'));
 });
 
 // first route is '/' - root of my website
-app.use('/', (req, res, next) => {
-  res.setHeader('Content-Type', 'text/plain');
-  res.end("Welcome!");
-
-  next();
+app.get('/', (req, res, next) => {
+  res.sendfile(path.join(__dirname+'/index.html'));
 });
+
+// start listening on the port
+app.listen(port);
